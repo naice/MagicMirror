@@ -1,3 +1,4 @@
+
 jQuery.fn.updateWithText = function(text, speed)
 {
 	var dummy = $('<div/>').html(text);
@@ -32,6 +33,7 @@ jQuery(document).ready(function($) {
 	var compliment;
 
     moment.locale(config.lang);
+	
 
 	//connect do Xbee monitor
 	// var socket = io.connect('http://rpi-alarm.local:8082');

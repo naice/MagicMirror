@@ -1,42 +1,40 @@
 var config = {
-    lang: 'nl',
+    lang: 'de',
     time: {
-        timeFormat: 12
+        timeFormat: 24
     },
     weather: {
         //change weather params here:
         //units: metric or imperial
         params: {
-            q: 'Baarn,Netherlands',
+            q: 'Ahaus,Germany',
             units: 'metric',
             // if you want a different lang for the weather that what is set above, change it here
-            lang: 'nl',
-            APPID: 'YOUR_FREE_OPENWEATHER_API_KEY'
+            lang: 'de',
+            APPID: '43de1514340bfa4096d38ec09fb74e79'
         }
     },
     compliments: {
         interval: 30000,
         fadeInterval: 4000,
         morning: [
-            'Good morning, handsome!',
-            'Enjoy your day!',
-            'How was your sleep?'
+            'Guten morgen, eins nicer dude!',
+            'Frühes vögeln entspannt den Wurm!',
+            'Alles fresh Homie?'
         ],
         afternoon: [
-            'Hello, beauty!',
-            'You look sexy!',
-            'Looking good today!'
+            'Geile sau!',
+            'Du siehst geil aus!',
+            'Heute mal wieder prächtig!'
         ],
         evening: [
-            'Wow, you look hot!',
-            'You look nice!',
-            'Hi, sexy!'
+            'Heiß heiß heiß!',
+            'Du siehst so unfassbar geil aus!',
+            'Hey, sweety!',
+            'Sip sip booooy!'
         ]
     },
-    calendar: {
-        maximumEntries: 10
-    },
     news: {
-        feed: 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml'
+        feed: 'http://t3n.de/news/feed/'
     }
 }
