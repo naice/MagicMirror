@@ -36,5 +36,18 @@ var config = {
     },
     news: {
         feed: 'http://t3n.de/news/feed/'
-    }
+    },
+    calendar: {
+        maxItemsDisplayed: 20,
+        calendars: [
+            {
+                url : "https://www.google.com/calendar/ical/mhkpje7sser0a1q2b99urco728@group.calendar.google.com/public/basic.ics",
+                color: "#3399ff",
+            },
+            {
+                url: "https://calendar.google.com/calendar/ical/im.naice%40gmail.com/private-4d01a1953bc6da5f195b42075004ac68/basic.ics",
+                color: "#FFFFFF",
+            },
+        ],
+    },
 }
