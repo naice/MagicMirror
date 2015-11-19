@@ -1,7 +1,8 @@
 <?php
 	
 	// Set the url of the calendar feed.
-	$url = 'https://calendar.google.com/calendar/ical/im.naice%40gmail.com/private-4d01a1953bc6da5f195b42075004ac68/basic.ics';
+	$url = htmlspecialchars($_REQUEST["url"]);
+	//$url = 'https://calendar.google.com/calendar/ical/im.naice%40gmail.com/private-4d01a1953bc6da5f195b42075004ac68/basic.ics';
 
 	/*****************************************/
 

@@ -5,14 +5,38 @@ var calendar = {
 	updateDataInterval: 60000,
 	fadeInterval: 1000,
 	intervalId: null,
-	dataIntervalId: null
+	dataIntervalId: null,
+	calendars : [
+		{
+			url : "https://www.google.com/calendar/ical/mhkpje7sser0a1q2b99urco728@group.calendar.google.com/public/basic.ics",
+			color: "#0000FF",
+		},
+		{
+			url: "https://calendar.google.com/calendar/ical/im.naice%40gmail.com/private-4d01a1953bc6da5f195b42075004ac68/basic.ics",
+			color: "#FFFFFF",
+		},
+	],
 }
 
 calendar.updateData = function (callback) {
+	this.eventList = [];
+	
+	for (var index = 0; index < this.calendars.length; index++) {
+		var cal = this.calendars[index];
+		var callb = null;
+		
+		if (index == this.calendars.lentgh-1) {
+			callb = callback;
+		}
+		
+		this.getCalendarData(cal.url, callb);
+	}
+}
 
-	new ical_parser("calendar.php", function(cal) {
+calendar.getCalendarData = function(url, callback) {
+
+	new ical_parser("calendar.php?url=" + encodeURIComponent(url), function(cal) {
 		var events = cal.getEvents();
-		this.eventList = [];
 
 		for (var i in events) {
 			var e = events[i];
